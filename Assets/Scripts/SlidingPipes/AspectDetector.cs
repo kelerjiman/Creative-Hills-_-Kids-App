@@ -90,6 +90,8 @@ namespace SlidingPipes
             var isTablet = (DeviceDiagonalSizeInInches() > 6.5f && aspectRatio < 2f);
  
             return isTablet ? EnumDeviceType.Tablet : EnumDeviceType.Phone;
+#else
+            return EnumDeviceType.Phone;
 #endif
         }
     }
